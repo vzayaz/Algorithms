@@ -1,8 +1,8 @@
 import os
 from unittest import TestCase
 
-from algo import external_sort
-from algo.external_sort import create_runs
+from algo.sorting import external_sort
+from algo.sorting.external_sort import create_runs
 
 
 class TestExternalSort(TestCase):
@@ -28,6 +28,6 @@ class TestExternalSort(TestCase):
     def test_sort(self):
 
 
-        external_sort.external_sort(self.data_dir +'input1.txt', "sorted.txt", self.data_dir, 4, merge_by=2)
+        external_sort.external_sort(self.data_dir + 'input1.txt', "sorted.txt", self.data_dir, 4, merge_by=2)
         self.assertTrue(os.path.isfile(self.data_dir + 'sorted.txt'))
 
